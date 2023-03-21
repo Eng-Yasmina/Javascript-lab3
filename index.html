@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yasmine-ITI-CMS</title>
+</head>
+<body>
+    <script>
+    /**
+     * Defines Global Variables
+     */
+
+    let response1 = '';
+    // Check if the input name is empty or contains any numbers from 0 to 9
+    while (response1==='' || !(/[0-9]{1}/.test(response1))) {
+        response1 = prompt('Please enter a random 1 digit number', '');
+    }
+
+    let response2 = '';
+    while (response2==='' ||  !(/[0-9]{1}/.test(response2))) {
+        response2 = prompt('Please enter a random 1 digit number', '');
+    } 
+
+    let response3 = '';
+    while (response3==='' ||  !(/[0-9]{1}/.test(response3))) {
+        response3 = prompt('Please enter a random 1 digit number', '');
+    } 
+
+    let response4 = '';
+    while (response4==='' ||  !(/[0-9]{1}/.test(response4))) {
+        response4 = prompt('Please enter a random 1 digit number', '');
+    } 
+
+    let response5 = '';
+    while (response5==='' ||  !(/[0-9]{1}/.test(response5))) {
+        response5 = prompt('Please enter a random 1 digit number', '');
+    } 
+
+    let nums = [response1, response2, response3, response4, response5];
+    //I've to store the value of the original arrey before it gets stored.
+    let string = nums.join(' , ');  // I can use .join OR .toString methods to create a string representation of the nums arr.
+    
+    let descending = nums.sort(function (a, b) {return b-a});
+    let string2 = nums.toString();
+
+    let ascending = nums.sort(function (a, b) {return a-b});
+    let string3 = ascending.toString();
+    
+
+    
+    document.write(`<table style="position:fixed; left:20%; top: 20%">
+                            <tr >
+                                <td>
+                                    <h1 style="color: Red;">You've entered the values of </h1>
+                                </td>
+                                <td>
+                                    <h2>${string}</h2>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <h1 style="color: Red;">Your values after being sorted descending</h1>
+                                </td>
+                                <td>
+                                    <h2>${string2}</h2>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <h1 style="color: Red;">Your values after being sorted ascending</h1>
+                                </td>
+                                <td>
+                                    <h2>${string3}<h3>
+                                </td>
+                            </tr>
+                    </table>`);    
+
+    </script>
+</body>
+</html>
